@@ -1,0 +1,16 @@
+.Button {
+  align-items: center;
+  background-color: #696969;
+  border: 2px solid #000;
+  border-radius: 5px;
+  color: #fff;
+  display: flex;
+  height: 4rem;
+  justify-content: center;
+  width: 8rem;
+
+  &:hover {
+    border-color: #daa520;
+    color: #daa520;
+  }
+}

@@ -1,4 +1,7 @@
 .selection {
   background-color: green;
+  display: flex;
   grid-area: selection;
+  justify-content: center;
+  padding: 0.5rem;
 }

@@ -1,5 +1,13 @@
+const getCoordinates = require('../utils/getCoordinates')
+
 exports.getDisplay = (req, res) => {
-  const text = req.query.text
-  console.log('Hey! I am the display endpoint')
-  res.json({ message: `Here is your test: ${text}` })
+  const location = req.query.location
+
+  getCoordinates(location, (result) => {
+    res.json({
+      location: result.location,
+      longitude: result.longitude,
+      latitude: result.latitude,
+    })
+  })
 }
