@@ -10,14 +10,17 @@ const getCoordinates = async (locationName, callback) => {
     const [data] = result.features
     const location = data.text
     const [longitude, latitude] = data.center
-    console.log(result)
+
     callback({
       location: location,
       longitude: longitude,
       latitude: latitude,
     })
   } catch (error) {
-    console.log('There was a problem')
+    console.log('There was a problem when trying to get the coordinates.')
+    callback({
+      error: error,
+    })
   }
 }
 

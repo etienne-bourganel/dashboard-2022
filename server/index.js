@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001
 
 const app = express()
 
-const homeRoutes = require('./routes/home')
+const homeRoutes = require('./routes/weather')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
